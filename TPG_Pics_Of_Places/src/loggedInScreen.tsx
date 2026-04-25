@@ -20,16 +20,31 @@ import {
 } from "@/components/ui/combobox";
 import L from "leaflet";
 import { Label } from "./components/ui/label";
+import markerIcon2x from "./images/marker-icon-2x.png";
+import markerIcon from "./images/marker-icon.png";
+import markerShadow from "./images/marker-shadow.png";
 function getIcon(_iconsize:number) {
   return new L.Icon({
     iconUrl: image,
     iconSize: [_iconsize, _iconsize],
   });
 }
+// function getPinIcon() {
+//   return new L.Icon({
+//     iconUrl: pinImage,
+//     iconSize: [25, 39],
+//   });
+// }
 type props = {
   currentUrl: string;
 };
+delete (L.Icon.Default.prototype as any)._getIconUrl;
 
+L.Icon.Default.mergeOptions({
+  iconUrl: markerIcon,
+  iconRetinaUrl: markerIcon2x,
+  shadowUrl: markerShadow,
+});
 const CheckToken = (props: props) => {
   if (!localStorage.getItem("token")) {
     return (
