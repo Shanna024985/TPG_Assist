@@ -3,7 +3,7 @@ import "./App.css";
 import { Route, Routes } from "react-router";
 
 import Dashboard from "./loggedInScreen";
-let currentUrl = "http://localhost:3000/api"
+let currentUrl = "https://tpg-assist.vercel.app/api"
 
 function App() {
   return (
