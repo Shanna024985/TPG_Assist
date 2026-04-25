@@ -3,9 +3,7 @@ import "./leaflet.css";
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
-  TableFooter,
   TableHead,
   TableHeader,
   TableRow,
@@ -318,7 +316,7 @@ const LoggedInScreen = (props: props) => {
                   .map((player,index) => (
                     <TableRow
                       key={player.name}
-                      onClick={(params) => {
+                      onClick={() => {
                         openPopup(player.name);
                         setSelectedImage(player.linkToPicture);
                       }}

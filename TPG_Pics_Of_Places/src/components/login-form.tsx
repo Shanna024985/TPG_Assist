@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/field"
 import { Input } from "@/components/ui/input"
 import { useRef } from "react"
-import { useNavigate } from "react-router"
+// import { useNavigate } from "react-router"
 type Props = {
   currentUrl: String
 } &  React.ComponentProps<"div">
@@ -49,7 +49,7 @@ export function LoginForm({
               return value.json();
             }).then((value)=>{
               localStorage.setItem("token",value.token)
-              useNavigate("/dashboard")
+              // useNavigate("/dashboard")
             })
           }}>
             <FieldGroup>
