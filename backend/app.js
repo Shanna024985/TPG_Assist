@@ -5,7 +5,7 @@ const path = require("path");
 
 let app = express();
 app.use(cors({
-    origin: ["http://localhost:5173","http://localhost:5174","http://localhost:3000","https://tpg-assist-main.vercel.app/"]
+    origin: ["http://localhost:5173","http://localhost:5174","http://localhost:3000","https://tpg-assist-main.vercel.app"]
 }))
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
